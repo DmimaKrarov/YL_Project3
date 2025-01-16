@@ -1,3 +1,6 @@
+import asyncio
+import time
+
 import pygame  # Импортируем библиотеку Pygame
 import sys  # Импортируем модуль sys для управления завершением программы
 
@@ -20,6 +23,7 @@ font = pygame.font.SysFont('Comic Sans MS', 74, italic=True)  # Основной
 # Загрузка изображения для кнопки
 fon_dlia_knopok = pygame.image.load("sprites/fon_dlia_knopki.png")
 background = pygame.image.load("sprites/background.png")
+background_crazy = pygame.image.load("sprites/background_crazy.png")
 
 # Определение областей кнопок с помощью прямоугольников
 start_button = pygame.Rect(60, 400, 450, 100)  # Кнопка 'Начать игру'
@@ -57,29 +61,45 @@ def draw_button(image, rect, text):
 
 
 # Основной игровой цикл
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:  # Если пользователь закрыл окно
-            running = False
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Если нажата левая кнопка мыши
-            if start_button.collidepoint(event.pos):
-                print("Скибиди доп доп ес ес")  # Здесь следует добавить логику для начала игры
-            if shop_button.collidepoint(event.pos):
-                print("Магазик")  # Здесь следует добавить логику для магаза
-            elif exit_button.collidepoint(event.pos):
-                pygame.quit()  # Выходим из Pygame при нажатии на 'Выход'
-                sys.exit()  # Завершаем программу
+async def main():
+    running = True
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:  # Если пользователь закрыл окно
+                running = False
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Если нажата левая кнопка мыши
+                if start_button.collidepoint(event.pos):
+                    print("Скибиди доп доп ес ес")  # Здесь следует добавить логику для начала игры
+                if shop_button.collidepoint(event.pos):
+                    print("Магазик")  # Здесь следует добавить логику для магаза
+                elif exit_button.collidepoint(event.pos):
+                    pygame.quit()  # Выходим из Pygame при нажатии на 'Выход'
+                    sys.exit()  # Завершаем программу
 
-    screen.blit(background, (0, 0))  # Рисовашкаем задний фон
-    draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
-    draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
-    draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
+        screen.blit(background, (0, 0))  # Рисовашкаем задний фон
 
-    draw_text("Яндекс лицей.", font, (0, 0, 0), screen, 400, 175)  # Текст Названия игры
-    draw_text("Закулисье.", font, (0, 0, 0), screen, 400, 275)  # Текст Названия игры
+        draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+        draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+        draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
 
-    pygame.display.flip()  # Обновляем экран
-    pygame.time.Clock().tick(FPS)  # Ограничиваем частоту кадров
+        draw_text("Яндекс лицей.", font, (0, 0, 0), screen, 400, 175)  # Текст Названия игры
+        draw_text("Закулисье.", font, (0, 0, 0), screen, 400, 275)  # Текст Названия игры
 
+        pygame.display.flip()  # Обновляем экран
+        pygame.time.Clock().tick(FPS)  # Ограничиваем частоту кадров
+
+
+async def background_paint():
+    while True:
+        screen.blit(background_crazy, (0, 0))  # Рисовашкаем задний фон
+        await asyncio.sleep(3)
+
+
+async def sigma():
+    # Запускаем задачи параллельно
+    await asyncio.gather(
+        main(),
+        background_paint()
+    )
+asyncio.run(sigma())
 pygame.quit()  # Завершаем Pygame

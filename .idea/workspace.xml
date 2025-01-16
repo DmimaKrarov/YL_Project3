@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="Убрал код игрока, добавил код стартового меню со слабым дизайном.">
+    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="Переделал задний фон">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736973296700</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Переделал задний фон">
+      <option name="closed" value="true" />
+      <created>1737062779842</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737062779842</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,6 +262,7 @@
     <MESSAGE value="Test Gita" />
     <MESSAGE value="Добавил спрайт главного персонажа и создал .py файл для кода" />
     <MESSAGE value="Убрал код игрока, добавил код стартового меню со слабым дизайном." />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрал код игрока, добавил код стартового меню со слабым дизайном." />
+    <MESSAGE value="Переделал задний фон" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переделал задний фон" />
   </component>
 </project>
