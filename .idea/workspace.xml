@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="Переделал задний фон">
+    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="Начал делать мини-анимацию заднего фона">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_menu.py" afterDir="false" />
     </list>
@@ -218,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737062779842</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Начал делать мини-анимацию заднего фона">
+      <option name="closed" value="true" />
+      <created>1737064693467</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737064693467</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +271,7 @@
     <MESSAGE value="Добавил спрайт главного персонажа и создал .py файл для кода" />
     <MESSAGE value="Убрал код игрока, добавил код стартового меню со слабым дизайном." />
     <MESSAGE value="Переделал задний фон" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделал задний фон" />
+    <MESSAGE value="Начал делать мини-анимацию заднего фона" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начал делать мини-анимацию заднего фона" />
   </component>
 </project>

@@ -61,15 +61,19 @@ def draw_button(image, rect, text):
 
 
 # Основной игровой цикл
-async def main():
+def main():
+    paint = 0
     running = True
+    image_visible = True
     while running:
+        paint += 1
         for event in pygame.event.get():
             if event.type == pygame.QUIT:  # Если пользователь закрыл окно
                 running = False
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Если нажата левая кнопка мыши
                 if start_button.collidepoint(event.pos):
                     print("Скибиди доп доп ес ес")  # Здесь следует добавить логику для начала игры
+                    screen.blit(background_crazy, (0, 0))  # Рисовашкаем задний фон
                 if shop_button.collidepoint(event.pos):
                     print("Магазик")  # Здесь следует добавить логику для магаза
                 elif exit_button.collidepoint(event.pos):
@@ -85,21 +89,46 @@ async def main():
         draw_text("Яндекс лицей.", font, (0, 0, 0), screen, 400, 175)  # Текст Названия игры
         draw_text("Закулисье.", font, (0, 0, 0), screen, 400, 275)  # Текст Названия игры
 
+        if paint % 25 == 0:
+            screen.blit(background_crazy, (-100, 0))
+        if paint % 30 == 0:
+            screen.blit(background_crazy, (100, 0))
+        if paint % 25 == 0:
+            screen.blit(background_crazy, (0, 0))
+        if 50 >= paint > 43:
+            screen.blit(background_crazy, (0, 0))
+        elif 100 >= paint > 90:
+            screen.blit(background_crazy, (0, 0))
+        elif 150 >= paint > 140:
+            screen.blit(background_crazy, (0, 0))
+        elif 200 >= paint > 190:
+            screen.blit(background_crazy, (0, 0))
+        elif 250 >= paint > 240:
+            screen.blit(background_crazy, (0, 0))
+        elif 300 >= paint > 290:
+            screen.blit(background_crazy, (0, 0))
+        elif 350 >= paint > 340:
+            screen.blit(background_crazy, (0, 0))
+        elif 400 >= paint > 390:
+            screen.blit(background_crazy, (0, 0))
+        elif 450 >= paint > 440:
+            screen.blit(background_crazy, (0, 0))
+        elif 500 >= paint > 490:
+            screen.blit(background_crazy, (0, 0))
+        elif 550 >= paint > 540:
+            screen.blit(background_crazy, (0, 0))
+        elif 600 >= paint > 590:
+            screen.blit(background_crazy, (0, 0))
+        elif 650 >= paint > 640:
+            screen.blit(background_crazy, (0, 0))
+        elif 700 >= paint > 690:
+            screen.blit(background_crazy, (0, 0))
+        elif 750 >= paint > 740:
+            screen.blit(background_crazy, (0, 0))
+
         pygame.display.flip()  # Обновляем экран
         pygame.time.Clock().tick(FPS)  # Ограничиваем частоту кадров
 
 
-async def background_paint():
-    while True:
-        screen.blit(background_crazy, (0, 0))  # Рисовашкаем задний фон
-        await asyncio.sleep(3)
-
-
-async def sigma():
-    # Запускаем задачи параллельно
-    await asyncio.gather(
-        main(),
-        background_paint()
-    )
-asyncio.run(sigma())
-pygame.quit()  # Завершаем Pygame
+if __name__ == '__main__':
+    main()
