@@ -82,49 +82,29 @@ def main():
 
         screen.blit(background, (0, 0))  # Рисовашкаем задний фон
 
-        draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
-        draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
-        draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
+        # draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+        # draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+        # draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
 
         draw_text("Яндекс лицей.", font, (0, 0, 0), screen, 400, 175)  # Текст Названия игры
         draw_text("Закулисье.", font, (0, 0, 0), screen, 400, 275)  # Текст Названия игры
 
-        if paint % 25 == 0:
-            screen.blit(background_crazy, (-100, 0))
-        if paint % 30 == 0:
-            screen.blit(background_crazy, (100, 0))
-        if paint % 25 == 0:
-            screen.blit(background_crazy, (0, 0))
-        if 50 >= paint > 43:
-            screen.blit(background_crazy, (0, 0))
-        elif 100 >= paint > 90:
-            screen.blit(background_crazy, (0, 0))
-        elif 150 >= paint > 140:
-            screen.blit(background_crazy, (0, 0))
-        elif 200 >= paint > 190:
-            screen.blit(background_crazy, (0, 0))
-        elif 250 >= paint > 240:
-            screen.blit(background_crazy, (0, 0))
-        elif 300 >= paint > 290:
-            screen.blit(background_crazy, (0, 0))
-        elif 350 >= paint > 340:
-            screen.blit(background_crazy, (0, 0))
-        elif 400 >= paint > 390:
-            screen.blit(background_crazy, (0, 0))
-        elif 450 >= paint > 440:
-            screen.blit(background_crazy, (0, 0))
-        elif 500 >= paint > 490:
-            screen.blit(background_crazy, (0, 0))
-        elif 550 >= paint > 540:
-            screen.blit(background_crazy, (0, 0))
-        elif 600 >= paint > 590:
-            screen.blit(background_crazy, (0, 0))
-        elif 650 >= paint > 640:
-            screen.blit(background_crazy, (0, 0))
-        elif 700 >= paint > 690:
-            screen.blit(background_crazy, (0, 0))
-        elif 750 >= paint > 740:
-            screen.blit(background_crazy, (0, 0))
+        if paint < 150:
+            if paint % 25 == 0:
+                screen.blit(background_crazy, (-100, 0))
+            if paint % 30 == 0:
+                screen.blit(background_crazy, (100, 0))
+            if paint % 25 == 0:
+                screen.blit(background_crazy, (0, 0))
+            if 50 >= paint > 43:
+                screen.blit(background_crazy, (0, 0))
+            elif 100 >= paint > 90:
+                screen.blit(background_crazy, (0, 0))
+            elif 150 >= paint > 140:
+                screen.blit(background_crazy, (0, 0))
+        else:
+            paint = 0
+
 
         pygame.display.flip()  # Обновляем экран
         pygame.time.Clock().tick(FPS)  # Ограничиваем частоту кадров
