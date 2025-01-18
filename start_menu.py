@@ -26,9 +26,9 @@ background = pygame.image.load("sprites/background.png")
 background_crazy = pygame.image.load("sprites/background_crazy.png")
 
 # Определение областей кнопок с помощью прямоугольников
-start_button = pygame.Rect(60, 400, 450, 100)  # Кнопка 'Начать игру'
-shop_button = pygame.Rect(60, 550, 450, 100)  # Кнопка 'Начать игру'
-exit_button = pygame.Rect(60, 700, 450, 100)  # Кнопка 'Выход'
+start_button = pygame.Rect(60, 520, 450, 100)  # Кнопка 'Начать игру'
+shop_button = pygame.Rect(60, 670, 450, 100)  # Кнопка 'Начать игру'
+exit_button = pygame.Rect(60, 820, 450, 100)  # Кнопка 'Выход'
 
 
 def draw_text(text, font, color, surface, x, y):
@@ -62,9 +62,8 @@ def draw_button(image, rect, text):
 
 # Основной игровой цикл
 def main():
-    paint = 0
+    paint = -40
     running = True
-    image_visible = True
     while running:
         paint += 1
         for event in pygame.event.get():
@@ -82,29 +81,60 @@ def main():
 
         screen.blit(background, (0, 0))  # Рисовашкаем задний фон
 
-        # draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
-        # draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
-        # draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
+        draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+        draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+        draw_button(fon_dlia_knopok, exit_button, 'Выход')  # Можно использовать разные изображения для разных кнопок
 
         draw_text("Яндекс лицей.", font, (0, 0, 0), screen, 400, 175)  # Текст Названия игры
         draw_text("Закулисье.", font, (0, 0, 0), screen, 400, 275)  # Текст Названия игры
 
-        if paint < 150:
+        if 0 < paint < 150:
             if paint % 25 == 0:
                 screen.blit(background_crazy, (-100, 0))
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
             if paint % 30 == 0:
                 screen.blit(background_crazy, (100, 0))
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
             if paint % 25 == 0:
                 screen.blit(background_crazy, (0, 0))
-            if 50 >= paint > 43:
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
+            if 50 >= paint > 35:
                 screen.blit(background_crazy, (0, 0))
-            elif 100 >= paint > 90:
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
+            elif 100 >= paint > 85:
                 screen.blit(background_crazy, (0, 0))
-            elif 150 >= paint > 140:
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
+            elif 150 >= paint > 135:
                 screen.blit(background_crazy, (0, 0))
+                draw_button(fon_dlia_knopok, start_button, "Играть")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, shop_button, "Магазин")  # Рисуем кнопку с изображением
+                draw_button(fon_dlia_knopok, exit_button,
+                            'Выход')  # Можно использовать разные изображения для разных кнопок
+
+        elif paint < 0:
+            pass
         else:
             paint = 0
-
 
         pygame.display.flip()  # Обновляем экран
         pygame.time.Clock().tick(FPS)  # Ограничиваем частоту кадров
