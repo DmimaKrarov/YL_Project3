@@ -1,4 +1,6 @@
 import asyncio
+import os
+import subprocess
 import time
 
 import pygame  # Импортируем библиотеку Pygame
@@ -21,9 +23,9 @@ pygame.display.set_caption("Стартовое меню")  # Устанавли�
 font = pygame.font.SysFont('Comic Sans MS', 74, italic=True)  # Основной шрифт для кнопок
 
 # Загрузка изображения для кнопки
-fon_dlia_knopok = pygame.image.load("sprites/fon_dlia_knopki.png")
-background = pygame.image.load("sprites/background.png")
-background_crazy = pygame.image.load("sprites/background_crazy.png")
+fon_dlia_knopok = pygame.image.load("sprites/ramki/fon_dlia_knopki.png")
+background = pygame.image.load("sprites/backgtound/background.png")
+background_crazy = pygame.image.load("sprites/backgtound/background_crazy.png")
 
 # Определение областей кнопок с помощью прямоугольников
 start_button = pygame.Rect(60, 520, 450, 100)  # Кнопка 'Начать игру'
@@ -73,6 +75,7 @@ def main():
                 if start_button.collidepoint(event.pos):
                     print("Скибиди доп доп ес ес")  # Здесь следует добавить логику для начала игры
                     screen.blit(background_crazy, (0, 0))  # Рисовашкаем задний фон
+                    os.system('python changee_level.py')
                 if shop_button.collidepoint(event.pos):
                     print("Магазик")  # Здесь следует добавить логику для магаза
                 elif exit_button.collidepoint(event.pos):

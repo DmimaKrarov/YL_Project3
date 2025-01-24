@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="полностью поменял стиль и спрайты.">
+    <list default="true" id="85419853-e672-42df-a2b1-d03a6f78dcbe" name="Changes" comment="Переделали спрайты.">
+      <change afterPath="$PROJECT_DIR$/changee_level.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/background_crazy.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/background_crazy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sprites/fon_dlia_knopki.png" beforeDir="false" afterPath="$PROJECT_DIR$/sprites/fon_dlia_knopki.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/start_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/start_menu.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +30,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -40,16 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.MineSweeper.executor&quot;: &quot;Run&quot;,
-    &quot;Python.start_menu.executor&quot;: &quot;Run&quot;,
-    &quot;Python.with_oop.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vldiu/PycharmProjects/zov_svo_goida/sprites&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.MineSweeper.executor": "Run",
+    "Python.Smsm_jisni.executor": "Run",
+    "Python.changee_level.executor": "Run",
+    "Python.main_game.executor": "Run",
+    "Python.start_menu.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.with_oop.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/vldiu/PycharmProjects/zov_svo_goida/sprites"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vldiu\PycharmProjects\zov_svo_goida\sprites" />
@@ -58,8 +63,8 @@
       <recent name="C:\Users\vldiu\PycharmProjects\zov_svo_goida\sprites" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.start_menu">
-    <configuration name="MineSweeper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.changee_level">
+    <configuration name="Smsm_jisni" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="zov_svo_goida" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Telegram Desktop/MineSweeper.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Telegram Desktop/Smsm_jisni.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,7 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_character" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="changee_level" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="zov_svo_goida" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,7 +99,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\vldiu\PycharmProjects\zov_svo_goida\main_character.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/changee_level.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="zov_svo_goida" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="with_oop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="zov_svo_goida" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,11 +161,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/Telegram Desktop" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Telegram Desktop/with_oop.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.changee_level" />
         <item itemvalue="Python.start_menu" />
-        <item itemvalue="Python.with_oop" />
-        <item itemvalue="Python.MineSweeper" />
-        <item itemvalue="Python.main_character" />
-        <item itemvalue="Python.MineSweeper" />
+        <item itemvalue="Python.Smsm_jisni" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.main_game" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737133613575</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Переделали спрайты.">
+      <option name="closed" value="true" />
+      <created>1737212813596</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737212813596</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +328,7 @@
     <MESSAGE value="Начал делать мини-анимацию заднего фона" />
     <MESSAGE value="Сделал моргание заднего фона, добавил стрёмности." />
     <MESSAGE value="полностью поменял стиль и спрайты." />
-    <option name="LAST_COMMIT_MESSAGE" value="полностью поменял стиль и спрайты." />
+    <MESSAGE value="Переделали спрайты." />
+    <option name="LAST_COMMIT_MESSAGE" value="Переделали спрайты." />
   </component>
 </project>
